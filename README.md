@@ -4,13 +4,13 @@
 
 | Column     | Type      | Options      |
 | ---------- | --------- | ------------ |
-| nickname   | text      | null: false  |
+| nickname   | string    | null: false  |
 | email      | string    | unique: true |
 | password   | string    | null: false  |
-| first_name | text      | null: false  |
-| first_kata | text      | null: false  |
-| last_name  | text      | null: false  |
-| last_kata  | text      | null: false  |
+| first_name | string    | null: false  |
+| first_kata | string    | null: false  |
+| last_name  | string    | null: false  |
+| last_kata  | string    | null: false  |
 | birthday   | string    | null: false  |
 
 ### Association
@@ -22,15 +22,15 @@
 
 | Column           | Type       | Options           |
 | ---------------- | ---------- | ----------------- |
-| item_name        | text       | null: false       |
-| item_condition   | text       | null: false       |
-| item_information | text       | null: false       |
-| item_price       | string     | null: false       |
-| category         | text       | null: false       |
+| name             | string     | null: false       |
+| condition_id     | integer    | null: false       |
+| information      | text       | null: false       |
+| price            | string     | null: false       |
+| category_id      | integer    | null: false       |
 | delivery_price   | string     | null: false       |
-| shipment_source  | text       | null: false       |
+| shipment_source  | string     | null: false       |
 | days_to ship     | string     | null: false       |
-| user_id          | references | foreign_key: true |
+| user             | references | foreign_key: true |
 
 
 ### Association
@@ -42,8 +42,8 @@
 
 | Column     | Type       | Options           |
 | ---------- | ---------- | ----------------- |
-| user_id    | references | foreign_key: true |
-| item_id    | references | foreign_key: true |
+| user       | references | foreign_key: true |
+| item       | references | foreign_key: true |
 
 ### Association
 
@@ -56,12 +56,12 @@
 
 | Column              | Type       | Options           |
 | ------------------- | ---------- | ----------------- |
-| postal_code         | string     | null: false       |
-| prefectures         | text       | null: false       |
-| municipality        | text       | null: false       |
-| address             | text       | null: false       |
+| postal_code_id      | integer    | null: false       |
+| prefectures_id      | integer    | null: false       |
+| municipality        | string     | null: false       |
+| address             | string     | null: false       |
 | phone_number        | string     | null: false       |
-| purchase_record_id  | references | foreign_key: true |
+| purchase_record     | references | foreign_key: true |
 
 ### Association
 
