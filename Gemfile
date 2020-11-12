@@ -63,4 +63,4 @@ end
 
 gem 'active_hash'
 
-gem ''
+gem 'devise'
