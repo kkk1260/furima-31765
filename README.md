@@ -2,16 +2,16 @@
 
 ## users　テーブル
 
-| Column     | Type      | Options      |
-| ---------- | --------- | ------------ |
-| nickname   | string    | null: false  |
-| email      | string    | unique: true |
-| password   | string    | null: false  |
-| first_name | string    | null: false  |
-| first_kata | string    | null: false  |
-| last_name  | string    | null: false  |
-| last_kata  | string    | null: false  |
-| birthday   | string    | null: false  |
+| Column             | Type      | Options      |
+| ------------------ | --------- | ------------ |
+| nickname           | string    | null: false  |
+| email              | string    | unique: true |
+| encrypted_password | string    | null: false  |
+| first_name         | string    | null: false  |
+| first_kata         | string    | null: false  |
+| last_name          | string    | null: false  |
+| last_kata          | string    | null: false  |
+| birthday           | date      | null: false  |
 
 ### Association
 
@@ -20,17 +20,17 @@
 
 # items
 
-| Column           | Type       | Options           |
-| ---------------- | ---------- | ----------------- |
-| name             | string     | null: false       |
-| condition_id     | integer    | null: false       |
-| information      | text       | null: false       |
-| price            | string     | null: false       |
-| category_id      | integer    | null: false       |
-| delivery_price   | string     | null: false       |
-| shipment_source  | string     | null: false       |
-| days_to ship     | string     | null: false       |
-| user             | references | foreign_key: true |
+| Column             | Type       | Options           |
+| ------------------ | ---------- | ----------------- |
+| name               | string     | null: false       |
+| condition_id       | integer    | null: false       |
+| information        | text       | null: false       |
+| price              | integer    | null: false       |
+| category_id        | integer    | null: false       |
+| delivery_price_id  | integer    | null: false       |
+| shipment_source_id | integer    | null: false       |
+| days_to ship_id    | integer    | null: false       |
+| user               | references | foreign_key: true |
 
 
 ### Association
@@ -56,12 +56,13 @@
 
 | Column              | Type       | Options           |
 | ------------------- | ---------- | ----------------- |
-| postal_code_id      | integer    | null: false       |
+| postal_code         | string     | null: false       |
 | prefectures_id      | integer    | null: false       |
 | municipality        | string     | null: false       |
 | address             | string     | null: false       |
 | phone_number        | string     | null: false       |
 | purchase_record     | references | foreign_key: true |
+| building_name       | string     | null: false       |
 
 ### Association
 
