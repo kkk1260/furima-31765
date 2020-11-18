@@ -6,6 +6,10 @@ RSpec.describe Item, type: :model do
       @item = FactoryBot.build(:item)
     end
 
+    it "全ての値が正常に入力されてたら登録できる" do
+      expect(@item).to be_valid
+    end
+
     it "商品の画像がないと出品できない" do
       @item.image = nil
       @item.valid?
