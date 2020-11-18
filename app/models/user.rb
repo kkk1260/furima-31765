@@ -20,6 +20,7 @@ class User < ApplicationRecord
       validates :first_kata
       validates :last_kata
     end
-
   end
+
+  has_many :items
 end
