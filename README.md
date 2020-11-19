@@ -1,6 +1,6 @@
 # テーブル設計
 
-## users　テーブル
+## usersテーブル
 
 | Column             | Type      | Options      |
 | ------------------ | --------- | ------------ |
@@ -18,7 +18,7 @@
 - has_many :items
 - has_many :purchase_records
 
-# items
+# itemsテーブル
 
 | Column             | Type       | Options           |
 | ------------------ | ---------- | ----------------- |
@@ -38,7 +38,7 @@
 - belongs_to :user
 - has_one    :purchase_record
 
-# purchase_records
+# purchase_recordsテーブル
 
 | Column     | Type       | Options           |
 | ---------- | ---------- | ----------------- |
@@ -51,7 +51,7 @@
 - belongs_to :item
 - has_many   :shipping_addresses
 
-# shipping_addresses
+# shipping_addressesテーブル
 
 
 | Column              | Type       | Options           |
